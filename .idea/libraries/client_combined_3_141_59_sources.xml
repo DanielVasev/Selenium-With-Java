@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="client-combined-3.141.59-sources">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../Driver_Jars/client-combined-3.141.59.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../Driver_Jars/java-client-4.1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../Driver_Jars/java-client-7.3.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../Driver_Jars/testng-6.7.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../Driver_Jars/client-combined-3.141.59-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
