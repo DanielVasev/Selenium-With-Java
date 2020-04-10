@@ -1,5 +1,6 @@
 package Test;
 
+
 import POM.Google_Search_Locators;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -12,18 +13,20 @@ public class Google_Search {
 
 
     public static void main(String[] args) {
-
-        setBrowser("Chrome");
+        // call 3 functions created on the bottom
+        setBrowser("FireFox");
         setBrowserConfig();
         runTest();
-
-
         String expTitle = "Google";
+
+
 //        System.setProperty("webdriver.chrome.driver", "D:\\STUDING\\JAVA\\Automation\\Driver_Jars\\ChromeDriver\\chromedriver.exe");
 //        driver = new ChromeDriver();
 //        driver.get("https://google.com");
 //        driver.manage().window().maximize();
 
+
+        // Using methods from class Google_Search_Locators
         Google_Search_Locators.Search_box(driver).sendKeys("Automate the world");
         Google_Search_Locators.search_btn(driver).sendKeys(Keys.RETURN);
 
