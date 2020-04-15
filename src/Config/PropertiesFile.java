@@ -1,5 +1,7 @@
 package Config;
 
+import Test.Google_Search;
+
 import java.io.*;
 import java.util.Properties;
 
@@ -23,6 +25,8 @@ public class PropertiesFile {
             prop.load(input);
 
             System.out.println(prop.getProperty("browser"));
+//            Google_Search.browser = prop.getProperty("browser");
+//            System.out.println(Google_Search.browser);
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -39,6 +43,7 @@ public class PropertiesFile {
 
             // What will type in the config file
             prop.setProperty("browser", "Chrome");
+            prop.setProperty("result","pass");
             // this will be the comment which can be add in the config file
             prop.store(output, "abc, comment");
 

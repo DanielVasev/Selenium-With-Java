@@ -1,6 +1,7 @@
 package Test;
 
 
+import Config.PropertiesFile;
 import POM.Google_Search_Locators;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -9,14 +10,17 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class Google_Search {
     public static WebDriver driver;
-    static String browser;
+    public static String browser;
 
 
     public static void main(String[] args) {
         // call 3 functions created on the bottom
-        setBrowser("FireFox");
+        //bottom line setUp browser choise
+        setBrowser("Chrome");
+        PropertiesFile.readPropertiesFile();
         setBrowserConfig();
         runTest();
+        PropertiesFile.writePropertiesFile();
         String expTitle = "Google";
 
 
