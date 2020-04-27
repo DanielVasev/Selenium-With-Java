@@ -16,22 +16,24 @@ public class Google_Search {
     public static void main(String[] args) {
         // call 3 functions created on the bottom
         //bottom line setUp browser choise
-        setBrowser("Chrome");
-        PropertiesFile.readPropertiesFile();
-        setBrowserConfig();
-        runTest();
-        PropertiesFile.writePropertiesFile();
+//        setBrowser("Chrome");
+//        PropertiesFile.readPropertiesFile();
+//        setBrowserConfig();
+//        runTest();
+//        PropertiesFile.writePropertiesFile();
         String expTitle = "Google";
 
 
-//        System.setProperty("webdriver.chrome.driver", "D:\\STUDING\\JAVA\\Automation\\Driver_Jars\\ChromeDriver\\chromedriver.exe");
-//        driver = new ChromeDriver();
-//        driver.get("https://google.com");
-//        driver.manage().window().maximize();
+        System.setProperty("webdriver.chrome.driver", "D:\\STUDING\\JAVA\\Automation\\Driver_Jars\\ChromeDriver\\chromedriver.exe");
+        driver = new ChromeDriver();
+        driver.get("https://google.com");
+        driver.manage().window().maximize();
+
+
 
 
         // Using methods from class Google_Search_Locators
-        Google_Search_Locators.Search_box(driver).sendKeys("Automate the world");
+        Google_Search_Locators.Text_box_search(driver).sendKeys("Automate the world");
         Google_Search_Locators.search_btn(driver).sendKeys(Keys.RETURN);
 
         String acctTitle = driver.getTitle();
