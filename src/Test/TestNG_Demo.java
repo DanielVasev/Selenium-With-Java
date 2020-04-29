@@ -11,10 +11,11 @@ import org.testng.annotations.Test;
 import java.security.Key;
 
 public class TestNG_Demo {
-    WebDriver driver;
+    //add WebDriver for the current class
+    private WebDriver driver;
 
 
-
+    // class where we prepear our browser driver
     @BeforeTest
     public void setUpTest(){
 
@@ -23,6 +24,7 @@ public class TestNG_Demo {
 
 
     }
+    // here is our actual test
     @Test
     public void googleSearch(){
 
@@ -35,12 +37,13 @@ public class TestNG_Demo {
 
 
     }
+    // with this method we close the driver and usualy add a steps to bring the enviromnet to the initial state
     @AfterTest
     public void tearDown(){
 
         driver.close();
         driver.quit();
-
+        // validation message visible in the console
         System.out.println("Test Completet Successfully!");
     }
 }
